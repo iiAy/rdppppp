@@ -5,11 +5,11 @@ on: [push, workflow_dispatch]
 jobs:
   build:
 
-    runs-on: linux-latest
+    runs-on: windows-8
 
     steps:
     - name: Download
-      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -OutFile ngrok.zip
+      run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract
       run: Expand-Archive ngrok.zip
     - name: Auth
